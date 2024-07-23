@@ -1,5 +1,5 @@
 # Cyan
-Librería JavaScript para desarrollar aplicaciones web, sin escribir HTML ni CSS, con UI de escritorio.
+Librería JavaScript para desarrollar el frontend de aplicaciones web, sin escribir HTML ni CSS, con UI de escritorio.
 
 ## Uso
 
@@ -43,7 +43,7 @@ A partir de esta instrucción, se van escribiendo sentencias como *AddDocument* 
 
 ### ¡Hola mundo!
 
-El siguiente código crea un documento inicial con un botón, que al pulsarse abre un segundo documento con el saludo clásico *¡Hola mundo!* Aunque pudo haberse escrito todo el código en el mismo archivo *index.html*, se prefirió escribir cada documento en un archivo aparte (*DocInicio.js* y *DocHolaMundo.js*) para ejemplificar el uso de componentes, que se cargan con la sentencia **cyan.LoadComponent()** en el *index.html*.
+El siguiente código crea un documento con el clásico saludo *¡Hola mundo!* Aunque pudo haberse escrito el código en el mismo archivo *index.html*, se prefirió escribir el documento en un archivo aparte (*DocHolaMundo.js*) para ejemplificar el uso de componentes, que se cargan con la sentencia **cyan.LoadComponent()** en el *index.html*.
 
 Archivo: index.html
 ```
@@ -54,36 +54,18 @@ Archivo: index.html
 <body>
     <script>
         cyan.Begin()
-        cyan.LoadComponent("DocInicio.js")
         cyan.LoadComponent("DocHolaMundo.js")
     </script>
 </body>
 </html>
 ```
 
-Archivo: DocInicio.js
-```
-// Interfaz de usuario.
-cyan.AddDocument(40,60,600,400,"Cyan","DocInicio")
-DocInicio.AddButton(240,240,"Saludar","DocInicio_btnSaludar")
-DocInicio.Bring()
-```
-
 Archivo: DocHolaMundo.js
 ```
 // Interfaz de usuario.
-cyan.AddDocument(350,180,360,200,"","DocHolaMundo")
-DocHolaMundo.AddLabel(130,40,"¡Hola mundo!","DocHolaMundo_lblSaludo")
-
-
-// Métodos.
-function DocHolaMundo_Listen(idObjeto, mensaje, metaMensaje) {
-    switch (mensaje) {
-        case 'DocInicio_btnSaludar_OnClick':
-            DocHolaMundo.Bring()
-            break
-    }
-}
+cyan.AddDocument(100,100,360,200,"","DocHolaMundo")
+DocHolaMundo.AddLabel(130,60,"¡Hola mundo!","DocHolaMundo_lblSaludo")
+DocHolaMundo.Bring()
 ```
 
 ---

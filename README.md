@@ -3,7 +3,7 @@ Librería JavaScript para escribir el frontend de aplicaciones web en ventanas, 
 
 ## Uso
 
-Descarga el archivo *cyan.js* e incorpóralo a tu proyecto en la sección **`<head>`** del *index.html*, y escribe toda tu aplicación web con Cyan y JavaScript entre las etiquetas **`<script></script>`**, o en archivos *.js* como componentes a importar dentro de ellas.
+Descarga el archivo *cyan-v1.0.0.js* e incorpóralo a tu proyecto en la sección **`<head>`** del *index.html*, y escribe toda tu aplicación web con Cyan y JavaScript entre las etiquetas **`<script></script>`** en la sección **`<body>`**, o en archivos *.js* como componentes a importar dentro de ellas.
 
 Se recomienda que cada documento o componente se escriba en un archivo aparte, para lograr una estructura clara que ayude a la actualización del software, y permita su reutilización en otros proyectos. Los documentos son similares a las ventanas tradicionales: se pueden mover, organizar, cerrar u ocultar. También se pueden crear componentes sin asociarse a un documento, como por ejemplo, una barra de menús.
 
@@ -28,6 +28,7 @@ A partir de esta instrucción, se van escribiendo sentencias como *AddDocument* 
 
 - El usuario dispone de un escritorio virtual mayor al tamaño del navegador con infinitas mesas de trabajo para organizar sus documentos como desee.
 
+
 ### ¡Hola mundo!
 
 El siguiente código crea un documento con el clásico saludo *¡Hola mundo!* Aunque pudo haberse escrito el código en el mismo archivo *index.html*, se prefirió escribir el documento en el archivo *DocHolaMundo.js* para ilustrar el uso de componentes, que se cargan con la sentencia **cyan.LoadComponent()** en el *index.html*. Notará el uso de algunas constantes de posición de Cyan, como por ejemplo, cyan.Col5, y de otras de tamaño, como por ejemplo, cyan.B4W. Estas y otras constantes las ofrece Cyan para facilitar el desarrollo y no tener que estar especificando números.
@@ -40,7 +41,7 @@ Archivo: index.html
 ```
 <!DOCTYPE html>
 <head>
-    <script type="text/javascript" src="./cyan.js"></script>
+    <script type="text/javascript" src="./cyan-v1.0.0.js"></script>
 </head>
 <body>
     <script>
@@ -120,7 +121,7 @@ Este proyecto es open source, y queda disponible a la comunidad tanto para su us
 
 **Para colaborar desarrollando:**
 
-El proyecto contiene solo dos archivos: el archivo *cyan.ts* con el código fuente en TypeScript y es el que debes tomar para trabajar, y el archivo *cyan.js*, que es el código transpilado a JavaScript y minificado listo para su uso en los proyectos. Puedes tomar uno de los issues o proponer uno nuevo, y luego crea una rama para desarrollarlo editando el archivo. Cuando termines, realiza un Pull Request.
+El proyecto contiene solo dos archivos: el archivo *cyan.ts* con el código fuente en TypeScript y es el que debes tomar para editar, y el archivo *cyan-v1.0.0.js* (o el archivo con la versión actual), que es el código transpilado a JavaScript y minificado listo para su uso en los proyectos. Puedes tomar uno de los issues o proponer uno nuevo, y luego crea una rama para desarrollarlo editando el archivo. Cuando termines, realiza un Pull Request. Los nuevos cambios serán incorporados a *cyan.ts* y quedarán disponibles para los desarrolladores en una nueva versión del archivo *cyan-vx.x.x.js*.
 
 Toda ayuda es útil. Muchísimas gracias.
 

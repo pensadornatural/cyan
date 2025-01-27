@@ -1,9 +1,9 @@
 # Cyan
-Librería JavaScript para escribir el frontend de aplicaciones web en ventanas, sin HTML ni CSS.
+Librería JavaScript para escribir fácilmente el frontend de aplicaciones web en ventanas, sin HTML ni CSS.
 
 ## Uso
 
-Descarga el archivo *cyan-v1.0.0.js* e incorpóralo a tu proyecto en la sección **`<head>`** del *index.html*, y escribe toda tu aplicación web con Cyan y JavaScript entre las etiquetas **`<script></script>`** en la sección **`<body>`**, o en archivos *.js* como componentes a importar dentro de ellas.
+Descarga el archivo *cyan-v1.0.0.js* (o la versión que corresponda), que es la librería minificada para su uso, e incorpóralo a tu proyecto en la sección **`<head>`** del *index.html*, y escribe toda tu aplicación web con Cyan y JavaScript entre las etiquetas **`<script></script>`** en la sección **`<body>`**, o en archivos *.js* como componentes a importar dentro de ellas.
 
 Se recomienda que cada documento o componente se escriba en un archivo aparte, para lograr una estructura clara que ayude a la actualización del software, y permita su reutilización en otros proyectos. Los documentos son similares a las ventanas tradicionales: se pueden mover, organizar, cerrar u ocultar. También se pueden crear componentes sin asociarse a un documento, como por ejemplo, una barra de menús.
 
@@ -66,7 +66,7 @@ function ComponentDocHolaMundo_OnLoaded() {
 **Manual de usuario**
 
 El manual de usuario con el detalle de todos los comandos para crear objetos, así como los métodos de cada uno, la lista de constantes y otros objetos que ofrece Cyan y cómo modificar la interfaz de usuario, comenzará prontamente a ser escrito.
-Por ahora, se indica en la siguiente sección los comandos para crear objetos.
+Por ahora, se indica en la siguiente sección los comandos para crear objetos en la pantalla (o en las mesas número *z*).
 
 ## Sentencias para crear objetos
 
@@ -110,8 +110,8 @@ cyan.AddPulldownMenu(id: string)
 
 **Notas**
 
-- El parámetro *z* corresponde al número de mesa donde se creará el objeto, en las coordenadas *x* e *y*. Recordar que por defecto, la mesa mostrada al inicio es la 0.
-- Cuando se añade un objeto a un documento, no se debe especificar el parámetro *z*, porque su valor siempre será el mismo que tenga el documento, y en lugar de comenzar la sentencia con "cyan.", debe usar simplemente el nombre del documento. Por ejemplo: DocHolaMundo.AddLabel(cyan.Col2, cyan.Row2, '¡Hola mundo!')
+- El parámetro *z* corresponde al número de mesa donde se creará el objeto, en las coordenadas *x* e *y*. La mesa mostrada al inicio es la 0.
+- Cuando se añade un objeto a un documento, no se debe especificar el parámetro *z*, porque su valor siempre será el que tenga el propio documento; además, en lugar de comenzar la sentencia con "cyan.", debes usar simplemente el nombre del documento. Por ejemplo: DocHolaMundo.AddLabel(cyan.Col2, cyan.Row2, '¡Hola mundo!')
 
 ---
 
@@ -121,9 +121,9 @@ Este proyecto es open source, y queda disponible a la comunidad tanto para su us
 
 **Para colaborar desarrollando:**
 
-El proyecto contiene solo dos archivos: el archivo *cyan.ts* con el código fuente en TypeScript y es el que debes tomar para editar, y el archivo *cyan-v1.0.0.js* (o el archivo con la versión actual), que es el código transpilado a JavaScript y minificado listo para su uso en los proyectos. Puedes tomar uno de los issues o proponer uno nuevo, y luego crea una rama para desarrollarlo editando el archivo. Cuando termines, realiza un Pull Request. Los nuevos cambios serán incorporados a *cyan.ts* y quedarán disponibles para los desarrolladores en una nueva versión del archivo *cyan-vx.x.x.js*.
+Toma uno de los issues (puedes proponer nuevos) y crea una rama para desarrollarlo editando el archivo *cyan.ts*. Cuando termines, realiza un Pull Request. Ya luego subiremos una nueva versión tanto de *cyan.ts* como de la librería minificada para explotación.
 
-Toda ayuda es útil. Muchísimas gracias.
+Muchísimas gracias.
 
 # Licencia
 

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyan</title>
+    <script type="text/javascript" src="./cyan-v1.0.0.js"></script>
+</head>
+
+<body>
+    <script>
+        cyan.Begin(cyan.Const.DarkMode) //Inicializar Cyan en modo oscuro. Por defecto es claro.
+        
+        cyan.LoadComponent("DocFormulario.js") //Importar un componente con un documento.
+
+        let texto = "Cómo crear un documento con un formulario, " +
+            "definir tipos de datos y campos obligatorios, y validarlo."
+
+        cyan.AddLabel(cyan.Col3, cyan.Row1, 0, texto) //Mostrar descripción del ejemplo en la mesa 0.
+    </script>
+</body>
+</html>
